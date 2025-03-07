@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../asset/lib/config.php';
+check_login();
 
 // Determine if it's a buy or sell transaction
 $transaction_type = isset($_GET['type']) && $_GET['type'] === 'sell' ? 'sell' : 'buy';
